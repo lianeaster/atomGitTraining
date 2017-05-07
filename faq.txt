@@ -1,0 +1,17 @@
+add > commit > push
+
+$ git clone https://github.com/lianeaster/atomGitTraining.git
+$ cd atomGitTraining/
+$ git status
+$ git add .
+$ git commit -m "add string"
+$ git push origin master
+$ git add .
+$ git status
+$ git commit -m "add string 2"
+$ git push origin master
+
+
+git branch
+git brancn 2
+git checkout 2
