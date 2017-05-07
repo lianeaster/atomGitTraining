@@ -1,2 +1,3 @@
 Please write new string below
 string 1
+string 2
