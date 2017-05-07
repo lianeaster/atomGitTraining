@@ -1,17 +1,64 @@
 add > commit > push
 
-$ git clone https://github.com/lianeaster/atomGitTraining.git
-$ cd atomGitTraining/
-$ git status
-$ git add .
-$ git commit -m "add string"
-$ git push origin master
-$ git add .
-$ git status
-$ git commit -m "add string 2"
-$ git push origin master
+//копируем репозиторий из github
+git clone https://github.com/lianeaster/atomGitTraining.git
 
+//переходим в папку
+cd atomGitTraining/
 
+//проверяем статус репозитория
+git status
+
+//добавляем все файлы с изминениями для комита
+git add .
+
+//добавляем комит с коментарием
+git commit -m "add string"
+
+//отправляем файлы в репозиторий origin, ветка master
+git push origin master
+
+//добавляем файлы
+git add .
+
+//проверяем статус файлов
+git status
+
+//добавляем файлы и пишем второй комит
+git commit -m "add string 2"
+
+//отправляем файл в рабочий репозиторий
+git push origin master
+
+//получаем список всех бранчей
 git branch
+
+//добавляем бранч №2
 git brancn 2
+
+//переходим в бранч №2
 git checkout 2
+
+//делаем изминения в бранче 2
+git add .
+
+//вносим изминения
+git commit -m "add faq"
+
+//отправляем файлы в рабочий репозиторий (бранч №2)
+git push origin 2
+
+//делаем pull request на сайте github.com, отметив ревьювера
+//проводят его review, и merge с основной веткой
+
+//локльно переключаемся на master
+git checkout master
+
+//удаляем ветку 2
+git branch -D 2
+
+//проверяем статус бранчи
+git status
+
+//скачиваем результат обьеденения ветки 2 и ветки master
+git pull origin master
