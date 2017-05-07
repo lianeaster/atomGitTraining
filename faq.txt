@@ -62,3 +62,39 @@ git status
 
 //скачиваем результат обьеденения ветки 2 и ветки master
 git pull origin master
+
+
+
+
+merge возникает при конфликте изминений в одном файле
+//проводим стандартную процедуру закидывания файла в remote репозиторий (origin)
+git add .
+git commit "3"
+git push origin master
+
+//git переходит в режим merge
+//название ветки меняется на atom134@i7 MINGW64 /d/Downloads/Git_Learn/atomGitTraining (master|MERGING)
+//требуется разрешение конфликта
+//в папке с проектом через tortoiseGit выбираем Diff
+//проводим соединение изменений в TortoiseGit
+//theirs - удаленный комит
+//mine - мой локальный комит
+//для выбора всего блока через ПКМ "use this text block"
+//для выбора определенной строки для соединения блока "use their before mine"
+//внизу зеленым будут выделены строки которые решили оставить
+//после разрешения кофликтов выбрать кнопку "all conflicts resolve"
+//после заходим в git консоль, и выбираем marge
+git merge --continue
+
+//появится текстовый редактор Vi, выходим через :q
+//смотрим git лог, появился ли marge комит
+git log --oneline -10
+a7748f8 Merge branch 'master' of https://github.com/lianeaster/atomGitTraining
+
+//отправляем изминения в origin
+git push origin master
+
+//проверяем статус
+git status
+
+
